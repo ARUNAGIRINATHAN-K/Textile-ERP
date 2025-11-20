@@ -1,0 +1,13 @@
+Django>=4.2
+djangorestframework
+djangorestframework-simplejwt
+psycopg2-binary
+django-cors-headers
+python-dotenv
+Pillow
+numpy
+pandas
+scikit-learn
+tensorflow==2.12.0  # for LSTM (adjust if incompatible)
+joblib
+gunicorn
