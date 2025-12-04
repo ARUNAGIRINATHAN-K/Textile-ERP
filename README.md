@@ -1,156 +1,166 @@
-# 🏭 Textile ERP - Enterprise Resource Planning System
+<p align="center">
+  <img src="https://img.icons8.com/color/96/fabric-roll.png" alt="Textile ERP Logo" width="80"/>
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)](https://fastapi.tiangolo.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-blue)](https://www.postgresql.org/)
+<h1 align="center">🏭 Textile ERP</h1>
 
-## Overview
+<p align="center">
+  <strong>Enterprise Resource Planning for Textile Manufacturing</strong>
+</p>
 
-A comprehensive, full-stack Enterprise Resource Planning system designed specifically for the textile manufacturing industry. Built with modern technologies (FastAPI, PostgreSQL, HTML/CSS/JS) and scalable architecture to handle all aspects of textile operations from procurement to sales, with planned Machine Learning integration for intelligent decision support.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/FastAPI-0.104-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/SQLite-Local-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-14+-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+</p>
 
-## Features
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx"/>
+</p>
 
-### ✅ Phase 1 - Core ERP (COMPLETE)
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#️-tech-stack">Tech Stack</a> •
+  <a href="#-api-endpoints">API</a> •
+  <a href="#-license">License</a>
+</p>
 
-**Authentication & Authorization**
-- JWT-based authentication with bcrypt password hashing
-- Role-based access control (Admin, Manager, Supervisor, Operator, Viewer)
-- Session management and audit logging
+---
 
-**Procurement Module**
-- ✅ Supplier management with ratings and status tracking
-- ✅ Purchase order creation and approval workflow
-- ✅ PO item management with material tracking
-- ✅ Delivery status and date tracking
-- ✅ Supplier performance ratings
-- **Pages**: Supplier List, Create PO, PO Details
+## ✨ Features
 
-**Inventory Module**
-- ✅ Material master with categories and units
-- ✅ Stock level monitoring with real-time updates
-- ✅ Stock receive/issue operations with batch tracking
-- ✅ Movement history and audit trail
-- ✅ Reorder alerts with priority calculation
-- ✅ Category-wise stock analysis with charts
-- **Pages**: Stock Dashboard, Material List, Movement History
+| Module | Description |
+|--------|-------------|
+| 🔐 **Authentication** | JWT-based login with role-based access control |
+| 📦 **Procurement** | Supplier management, purchase orders, delivery tracking |
+| 🏬 **Inventory** | Stock levels, movements, reorder alerts |
+| ⚙️ **Production** | Work orders, machine allocation, production logs |
+| ✅ **Quality Control** | QC inspections, defect tracking, batch approvals |
+| 💼 **Sales** | Customer management, sales orders, dispatch notes |
+| 📊 **Reports** | Dashboard KPIs, analytics, trend charts |
 
-**Production Module**
-- ✅ Work order management with status workflow
-- ✅ Bill of Materials (BOM) management
-- ✅ Machine allocation and scheduling
-- ✅ Production logging by shift
-- ✅ Progress tracking with completion percentages
-- ✅ Downtime and rejection tracking
-- **Pages**: Work Order List, Create WO, Production Log
+---
 
-**Quality Control Module**
-- ✅ QC inspection with auto-result determination
-- ✅ Defect logging with severity levels (Minor/Major/Critical)
-- ✅ Automatic pass/fail calculation based on thresholds
-- ✅ Batch approval workflow
-- ✅ Inspection reports with defect analysis
-- **Pages**: QC Form, Inspection List, Defect Reports
+## 🚀 Quick Start
 
-**Sales Module**
-- ✅ Customer management with credit limits
-- ✅ Sales order processing with status tracking
-- ✅ Order item management
-- ✅ Dispatch note generation
-- ✅ Delivery status tracking
-- **Pages**: Customer List, Create Sales Order, Dispatch Management
+### Option 1: Docker (Recommended)
 
-**Reports & Analytics**
-- ✅ Comprehensive dashboard with KPIs
-- ✅ Module-wise analytical reports
-- ✅ Trend analysis (sales, production, quality)
-- ✅ Chart visualizations (Chart.js)
-- ✅ Real-time data updates
+```bash
+docker-compose up -d
+```
 
-### 🔄 Phase 2 - Automation (PLANNED)
+### Option 2: Manual Setup
 
-## Quick Start
+```bash
+# Backend
+cd backend
+pip install -r requirements-local.txt
+python create_db.py
+python scripts/seed_data.py
+python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-### Using Docker (Recommended)
+# Frontend (new terminal)
+cd frontend
+python -m http.server 80
+```
 
-1. **Start all services**:
-   ```powershell
-   docker-compose up -d
-   ```
+### 🌐 Access
 
-2. **Initialize database** (first time only):
-   ```powershell
-   docker-compose exec backend python -c "from app.core.database import Base, engine; Base.metadata.create_all(bind=engine)"
-   ```
+| Service | URL |
+|---------|-----|
+| Web App | http://localhost |
+| API Docs | http://localhost:8000/docs |
 
-3. **Load sample data**:
-   ```powershell
-   docker-compose exec backend python scripts/seed_data.py
-   ```
+### 🔑 Default Credentials
 
-4. **Access the application**:
-   - **Web UI**: http://localhost
-   - **API Docs**: http://localhost:8000/docs
-   - **Login Credentials**:
-     - Admin: `admin` / `admin123`
-     - Manager: `manager1` / `manager123`
-     - Operator: `operator1` / `operator123`
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | `admin` | `admin123` |
+| Manager | `manager1` | `manager123` |
+| Operator | `operator1` | `operator123` |
 
-📖 **See [QUICKSTART.md](QUICKSTART.md) for detailed walkthrough, testing workflows, and troubleshooting.**
+---
 
-### Manual Setup
+## 🛠️ Tech Stack
 
-For development without Docker, see [SETUP.md](SETUP.md) for detailed installation instructions.
+<table>
+<tr>
+<td align="center" width="150"><b>Backend</b></td>
+<td align="center" width="150"><b>Frontend</b></td>
+<td align="center" width="150"><b>Database</b></td>
+<td align="center" width="150"><b>DevOps</b></td>
+</tr>
+<tr>
+<td align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40"/><br/>Python<br/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40"/><br/>FastAPI
+</td>
+<td align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40"/><br/>HTML5<br/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40"/><br/>JavaScript
+</td>
+<td align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40"/><br/>PostgreSQL<br/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="40"/><br/>SQLite
+</td>
+<td align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40"/><br/>Docker<br/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="40"/><br/>Nginx
+</td>
+</tr>
+</table>
 
-## Documentation
+---
 
-- **[QUICKSTART.md](QUICKSTART.md)** - Get started in 5 minutes with step-by-step guide
-- **[SETUP.md](SETUP.md)** - Detailed installation and configuration guide
-- **[IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)** - Technical architecture and API reference
-- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Complete project overview and delivery status
+## 📁 Project Structure
 
-## Available Pages
+```
+Textile-ERP/
+├── backend/
+│   ├── app/
+│   │   ├── api/routes/      # API endpoints
+│   │   ├── core/            # Config, DB, security
+│   │   └── models/          # SQLAlchemy models
+│   ├── scripts/             # Seed data
+│   └── main.py              # FastAPI app
+├── frontend/
+│   ├── index.html           # Landing page
+│   ├── dashboard.html       # Main dashboard
+│   ├── inventory/           # Inventory pages
+│   ├── procurement/         # Procurement pages
+│   ├── production/          # Production pages
+│   ├── quality/             # QC pages
+│   ├── sales/               # Sales pages
+│   └── reports/             # Report pages
+├── docker-compose.yml
+└── nginx.conf
+```
 
-### Frontend Web Pages (Implemented)
-- ✅ **Login** (`/login.html`) - Authentication with JWT
-- ✅ **Dashboard** (`/dashboard.html`) - Main dashboard with KPIs and charts
-- ✅ **Supplier List** (`/procurement/supplier-list.html`) - Manage suppliers
-- ✅ **Create PO** (`/procurement/create-po.html`) - Create purchase orders
-- ✅ **Stock Dashboard** (`/inventory/stock-dashboard.html`) - Inventory management
-- ✅ **QC Form** (`/quality/qc-form.html`) - Quality inspection form
+---
 
-### API Endpoints (60+)
-All endpoints documented at http://localhost:8000/docs:
-- `/api/auth/*` - Authentication (4 endpoints)
-- `/api/procurement/*` - Procurement management (10 endpoints)
-- `/api/inventory/*` - Inventory operations (11 endpoints)
-- `/api/production/*` - Production management (12 endpoints)
-- `/api/quality/*` - Quality control (10 endpoints)
-- `/api/sales/*` - Sales management (11 endpoints)
-- `/api/reports/*` - Analytics and reporting (9 endpoints)
+## 📡 API Endpoints
 
-## Testing Workflows
+| Module | Endpoints | Description |
+|--------|-----------|-------------|
+| `/api/auth` | 4 | Login, register, profile |
+| `/api/procurement` | 10 | Suppliers, POs |
+| `/api/inventory` | 11 | Materials, stock |
+| `/api/production` | 12 | Work orders, logs |
+| `/api/quality` | 10 | Inspections, defects |
+| `/api/sales` | 11 | Customers, orders |
+| `/api/reports` | 9 | Analytics, KPIs |
 
-### Workflow 1: Create Purchase Order
-1. Login as admin
-2. Navigate to Procurement → Supplier List
-3. Click "Add New Supplier" (or select existing)
-4. Click "Create PO" icon next to supplier
-5. Add materials with quantities and prices
-6. Submit purchase order
+> 📖 Full API documentation at **http://localhost:8000/docs**
 
-### Workflow 2: Receive Stock
-1. Go to Inventory → Stock Dashboard
-2. Click "Receive Stock"
-3. Select material and enter quantity/cost
-4. System creates inventory item and movement record
-5. View updated stock levels and charts
+---
 
-### Workflow 3: Quality Inspection
-1. Navigate to Quality → QC Form
-2. Select inspection type (Production/Procurement)
-3. Enter batch details and quantities
-4. Add defects if found (severity: Minor/Major/Critical)
-5. System auto-calculates defect rate and pass/fail result
-6. Submit inspection
-
-### 🔄 Phase 2 - Automation (PLANNED)
+<p align="center">
+  <sub>Built with ❤️ for the textile industry</sub>
+</p>

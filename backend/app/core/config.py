@@ -13,10 +13,10 @@ class Settings(BaseSettings):
     VERSION: str = "1.0.0"
     DEBUG: bool = True
     
-    # Database
+    # Database - Changed to SQLite for easier local testing
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
-        "postgresql://postgres:postgres@localhost:5432/textile_erp"
+        "sqlite:///./test.db"
     )
     
     # Security
@@ -30,6 +30,7 @@ class Settings(BaseSettings):
         "http://localhost:8080",
         "http://127.0.0.1:3000",
         "http://127.0.0.1:8080",
+        "http://localhost",
     ]
     
     # Email (Phase 2 - Alerts)

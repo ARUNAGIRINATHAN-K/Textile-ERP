@@ -1,0 +1,39 @@
+<!-- Standardized Navigation Template -->
+<nav class="bg-indigo-600 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-industry text-2xl"></i>
+            <h1 class="text-2xl font-bold">Textile ERP</h1>
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="dashboard.html" class="hover:text-indigo-200">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="procurement/supplier-list.html" class="hover:text-indigo-200">
+                <i class="fas fa-shopping-cart"></i> Procurement
+            </a>
+            <a href="inventory/stock-dashboard.html" class="hover:text-indigo-200">
+                <i class="fas fa-boxes"></i> Inventory
+            </a>
+            <a href="production/work-orders.html" class="hover:text-indigo-200">
+                <i class="fas fa-cogs"></i> Production
+            </a>
+            <a href="quality/qc-form.html" class="hover:text-indigo-200">
+                <i class="fas fa-check-circle"></i> Quality
+            </a>
+            <a href="sales/customers.html" class="hover:text-indigo-200">
+                <i class="fas fa-chart-line"></i> Sales
+            </a>
+            <a href="reports/reports-procurement.html" class="hover:text-indigo-200">
+                <i class="fas fa-file-alt"></i> Reports
+            </a>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-user-circle text-2xl"></i>
+                <span id="userName">User</span>
+            </div>
+            <button onclick="logout()" class="hover:bg-indigo-700 px-3 py-1 rounded">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+</nav>
