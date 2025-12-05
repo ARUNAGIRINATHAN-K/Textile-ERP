@@ -109,6 +109,20 @@
 
 ---
 
-Built for the textile industry
+<img src="img/Screenshot 2025-12-04 201009.png" type="Screenshort" width="800px" height="800px" />
+
+<img src="img/Screenshot 2025-12-04 201028.png" type="Screenshort" width="800px" height="800px" />
+
+<img src="img/Screenshot 2025-12-04 201958.png" type="Screenshort" width="800px" height="800px" />
+
+<img src="img/Screenshot 2025-12-04 202052.png" type="Screenshort" width="700px" height="800px" />
+
+<img src="img/Screenshot 2025-12-04 202032.png" type="Screenshort" width="700px" height="800px" />
+
+<img src="img/Screenshot 2025-12-04 202117.png" type="Screenshort" width="700px" height="900px" />
+
+---
+
+## Built for the textile industry
 
 </div>
