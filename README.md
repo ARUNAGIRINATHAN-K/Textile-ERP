@@ -31,38 +31,21 @@
 
 ---
 
-## ✨ Features
+## Features
 
 | Module | Description |
 |--------|-------------|
-| 🔐 **Authentication** | JWT-based login with role-based access control |
-| 📦 **Procurement** | Supplier management, purchase orders, delivery tracking |
-| 🏬 **Inventory** | Stock levels, movements, reorder alerts |
-| ⚙️ **Production** | Work orders, machine allocation, production logs |
-| ✅ **Quality Control** | QC inspections, defect tracking, batch approvals |
-| 💼 **Sales** | Customer management, sales orders, dispatch notes |
-| 📊 **Reports** | Dashboard KPIs, analytics, trend charts |
+| **Authentication** | JWT-based login with role-based access control |
+| **Procurement** | Supplier management, purchase orders, delivery tracking |
+| **Inventory** | Stock levels, movements, reorder alerts |
+| **Production** | Work orders, machine allocation, production logs |
+| **Quality Control** | QC inspections, defect tracking, batch approvals |
+| **Sales** | Customer management, sales orders, dispatch notes |
+| **Reports** | Dashboard KPIs, analytics, trend charts |
 
 ---
 
-### 🌐 Access
-
-| Service | URL |
-|---------|-----|
-| Web App | http://localhost |
-| API Docs | http://localhost:8000/docs |
-
-### 🔑 Default Credentials
-
-| Role | Username | Password |
-|------|----------|----------|
-| Admin | `admin` | `admin123` |
-| Manager | `manager1` | `manager123` |
-| Operator | `operator1` | `operator123` |
-
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 <table>
 <tr>
@@ -93,7 +76,24 @@
 
 ---
 
-## 📡 API Endpoints
+### Access
+
+| Service | URL |
+|---------|-----|
+| Web App | http://localhost |
+| API Docs | http://localhost:8000/docs |
+
+### Default Credentials
+
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | `admin` | `admin123` |
+| Manager | `manager1` | `manager123` |
+| Operator | `operator1` | `operator123` |
+
+---
+
+## API Endpoints
 
 | Module | Endpoints | Description |
 |--------|-----------|-------------|
